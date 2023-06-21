@@ -1,6 +1,5 @@
 package com.nerdware.oreillyspringbatch.Entity;
 
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.relational.core.mapping.Table;
