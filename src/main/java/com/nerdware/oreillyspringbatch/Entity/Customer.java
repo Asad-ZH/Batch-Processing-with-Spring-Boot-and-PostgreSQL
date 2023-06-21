@@ -1,6 +1,5 @@
 package com.nerdware.oreillyspringbatch.Entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.relational.core.mapping.Table;
@@ -29,5 +28,4 @@ public class Customer {
                 this.lastName = lastName;
                 this.birthdate = birthdate;
         }
-
 }
