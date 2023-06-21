@@ -60,10 +60,16 @@ public class WritingFlatFilesConfig {
     }
 
     @Bean
+    public FilteringItemProcessor itemProcessor(){
+        return new FilteringItemProcessor();
+    }
+
+    @Bean
     public Step step1() throws Exception {
         return stepBuilderFactory.get("step1")
                 .<Customer, Customer>chunk(10)
                 .reader(pagingItemReader())
+                .processor(itemProcessor())
                 .writer(customerItemWriter())
                 .allowStartIfComplete(true)
                 .build();
